@@ -1,0 +1,21 @@
+{
+ "manifest_version": 2,
+ "name": "myPKFiT_login_tester",
+ "version": "1",
+ "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+ ],
+ "content_scripts": [
+	{
+	 "matches": ["<all_urls>"],
+	 "js": ["login_tester_content_script.js"]
+	}
+ ], 
+  "background": {
+	"scripts": ["login_tester_back_script.js"]
+ },
+  "browser_action": {} 
+}
